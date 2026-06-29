@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: hsl(68, 30%, 79%);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #0e063a;
+}
+
+header h1 {
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #00bfff;
+}
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #b0e0f0;
+  transition: width 0.3s ease;
+}
+nav a:hover::after {
+  width: 100%;
+}
+section {
+  padding: 80px 10%;
+}
+
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1516617217372-ca29bc8c4001?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z29vZCUyMGxvb2tpbmclMjBiYWNrZ3JvdW5kJTIwcHJvZmlsZSUyMGltYWdlJTIwb2YlMjBhJTIwZmxvd2VyfGVufDB8fDB8fHww");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 0, 0.322);
+  z-index: 0;
+}
+
+#hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+#hero-content p {
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+#hero-content button {
+  background-color: #222;
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+#hero-content button:hover {
+  background-color: rgba(11, 241, 165, 0.514);
+  transform: translateY(-5px) scale(1.1);
+  animation: pulse 2s ease-in;
+  color: white;
+  cursor: grab;
+}
+#hero-content button a {
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+main {
+  animation: fadeInUp 5s ease-out;
+}
+body h2 {
+  text-align: center;
+}
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
+  padding-left: 20px;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 60px;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+form button {
+  width: fit-content;
+  padding: 12px 24px;
+  border: none;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+form button:hover {
+  background-color: aquamarine;
+  transform: scale(1.5);
+  animation: pulse 0.5s ease-in;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0e063a;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  #skills ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  #projects {
+    display: grid;
+    gap: 20px;
+  }
+
+  #projects section {
+    flex: 1;
+  }
+
+  #hero h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #skills ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

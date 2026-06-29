@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Amarachi Peace</h1>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="hero">
+      <section class="overlay"></section>
+      <section id="hero-content">
+        <h2>Writer | Tech Enthusiast | Student Radiographer</h2>
+        <button><a href="#projects">View My Work</a></button>
+      </section>
+    </section>
+
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am 400l student of Radiography and Radiological Sciences at the
+          University of Nigeria, Nsukka. I am passionate about technology, web
+          development, and creating user-friendly digital experiences. I enjoy
+          learning new skills and applying them to real-world projects.
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Critical Thinking</li>
+          <li>Attention to Detail</li>
+          <li>Time Management</li>
+          <li>Responsive Design</li>
+          <li>Problem Solving</li>
+          <li>Writing</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul class="project">
+          <li>
+            <h3>Portfolio Website</h3>
+            <p>
+              A personal portfolio website showcasing my skills and projects.
+            </p>
+          </li>
+          <li>
+            <h3>Labs</h3>
+            <p>I have worked with a team to solve some cybersecurity labs.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+
+        <p>Email: amarachi@gmail.com</p>
+        <p>Phone: +23490...</p>
+
+        <form>
+          Name: <input type="text" placeholder="Your Name" required /> Email:
+          <input type="email" placeholder="Your Email" required />
+          <label for="service">Choose a Service</label>
+
+          <select id="service" name="service" required>
+            <option value="" disabled selected hidden>Select a Service</option>
+            <option value="frontend">Frontend Development</option>
+            <option value="web-design">Web Design</option>
+            <option value="writing">Writing</option>
+            <option value="consultation">Consultation</option>
+          </select>
+          Message: <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Amarachi. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
